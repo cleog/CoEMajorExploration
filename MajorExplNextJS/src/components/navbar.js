@@ -2,6 +2,8 @@
 
 // CITE: Modified from code in https://dev.to/ryaddev/creating-a-responsive-navbar-using-nextjs-and-tailwind-css-48kk 
 import Link from "next/link";
+import Image from "next/image";
+import osuLogo from './osu-logo.jpg'
 import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 
@@ -21,18 +23,18 @@ const Navbar = () => {
     },
     {
       id: 3,
-      link: "portfolio",
-      label: "portfolio",
+      link: "majors",
+      label: "Majors",
     },
     {
       id: 4,
-      link: "experience",
-      label: "experience",
+      link: "quiz",
+      label: "Quiz",
     },
   ];
 
   return (
-    <div className="flex justify-between items-center w-full h-20 px-4 text-white bg-black fixed nav">
+    <div className="flex justify-between items-center w-full h-20 px-4 text-white bg-orange fixed nav">
       <div>
         {/* <h1 className="text-5xl font-signature ml-2"><a className="link-underline hover:transition ease-in-out delay-150 hover:underline hover:decoration-solid" href="">Logo</a></h1> */}
         <h1 className="text-5xl font-signature ml-2">
@@ -42,7 +44,7 @@ const Navbar = () => {
             target="_blank"
             rel="noreferrer"
           >
-            OSU
+            <Image src={osuLogo} alt="OSU Logo" width={180} height={180} />
           </a>
         </h1>
       </div>
@@ -51,7 +53,7 @@ const Navbar = () => {
         {links.map(({ id, link, label }) => (
           <li
             key={id}
-            className="nav-links px-4 cursor-pointer capitalize font-medium text-gray-500 hover:scale-105 hover:text-white duration-200 link-underline"
+            className="nav-links px-4 cursor-pointer capitalize font-medium text-black hover:scale-105 hover:text-white duration-200 link-underline"
           >
             <Link href={link}>{label}</Link>
           </li>

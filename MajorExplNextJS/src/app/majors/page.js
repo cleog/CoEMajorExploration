@@ -7,7 +7,7 @@ export default function Home() {
       </div>
 
       <div>
-        <h1 className={`mb-3 text-2xl font-semibold`}>ABOUT College of Engineering Major Exploration</h1>
+        <h1 className={`mb-3 text-2xl font-semibold`}>MAJORS College of Engineering Major Exploration</h1>
         <h2 className={`mb-3 text-2xl font-semibold`}>Oregon State University</h2>
       </div>
 
