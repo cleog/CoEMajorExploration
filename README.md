@@ -94,6 +94,8 @@ Tech Stack: MERN
 [![React][React.js]][React-url]
 <br>
 [![Node][Node.js]][Node-url]
+<br>
+[![Next][Next.js]][Next-url]
 
 ---
 
@@ -124,6 +126,9 @@ Tech Stack: MERN
 
 [Node.js]: https://img.shields.io/badge/Node-20232A?style=for-the-badge&logo=Node.js&logoColor=339933
 [Node-url]: https://nodejs.org/en/
+
+[Next.js]: https://img.shields.io/badge/Next-20232A?style=for-the-badge&logo=Node.js&logoColor=000000
+[Next-url]: https://nextjs.org/
 
 [LicenseMIT]: https://img.shields.io/badge/License-MIT-yellow.svg
 [LicenseMIT-URL]: https://github.com/cleog/CoEMajorExploration/blob/main/LICENSE.md
