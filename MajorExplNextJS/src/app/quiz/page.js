@@ -1,4 +1,6 @@
 
+import Image from "next/image";
+import quiz from '/src/components/quiz.png'
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center p-24">
@@ -9,9 +11,8 @@ export default function Home() {
       <div>
         <h1 className={`mb-3 text-2xl font-semibold`}>QUIZ College of Engineering Major Exploration</h1>
         <h2 className={`mb-3 text-2xl font-semibold`}>Oregon State University</h2>
+        <Image src={quiz} alt="Quiz Placeholder" width={540} />
       </div>
-
-      
     </main>
   )
 }
