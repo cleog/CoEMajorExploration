@@ -47,3 +47,30 @@ app.post('/create/question', async (request, response) => {
     response.sendStatus(404);
   }
 });
+
+// Update Function
+// TODO: Will need a more reliable way of flagging the questions
+// TODO: Need to add error handling
+
+app.put('/update/question/:id', async (request, response) => {
+  const id = request.params.id;
+  const query = {id};
+  const question = request.body.question;
+  const weight = request.body.weight;
+  const newData = {question, weight};
+  // Create new entry option if id does not exist
+  const options = { upsert: true };
+  await Questions.updateOne(query, newData, options);
+  response.send('Updated Question').status(200);
+});
+
+// Delete Function
+// TODO: Also will need a reliable way of marking/flagging the questions to delete
+// TODO: Error handling
+
+app.delete('/delete/question/:id', async (request, response) => {
+  const id = request.params.id;
+  const query = {id};
+  await Questions.deleteOne(query);
+  response.send('Deleted Question').status(200);
+});
