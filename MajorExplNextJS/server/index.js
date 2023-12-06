@@ -1,6 +1,6 @@
 const { MongoClient } = require("mongodb");
 
-const uri = "mongodb+srv://coe_admin:CoE123%232023!@cs46x.l19wpnk.mongodb.net/?retryWrites=true&w=majority";
+const uri = "mongodb+srv://coe_admin:" + process.env.MONGODB_KEY + "@cs46x.l19wpnk.mongodb.net/?retryWrites=true&w=majority";
 const client = new MongoClient(uri);
 async function run() {
   try {
